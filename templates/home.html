@@ -1,0 +1,137 @@
+{%extends "layout.html"%}
+{%block content%}
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  /* h2 {color: #000080;}
+      
+    a[href] {color: red;}
+
+    a:hover {color: green;} */
+
+
+  body {
+    width: 100%;
+    height: 100vh;
+
+    background-image: url('/static/b.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+  }
+
+  .about {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .about .def {
+    padding: 10px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    color: black;
+  }
+
+  .about .center {
+    width: 100%;
+    height: 60vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+  }
+
+  .about .center .box {
+    width: 30%;
+    height: 80%;
+    /* border: 2px solid yellow; */
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    box-shadow: 5px 5px 4px 4px rgb(61, 60, 60);
+  }
+
+  .about .center .box img {
+    border-radius: 15px 15px 0 0;
+  }
+
+  .about .center .box h1 {
+    text-align: center;
+    color: black;
+
+  }
+
+  .about .center .box a {
+    text-decoration: none;
+  }
+
+  .about .center .box .button {
+    background-color: black;
+    opacity: 0.8;
+    width: 43%;
+    padding: 5px;
+    font-size: 20px;
+    border-radius: 5px;
+    color: white;
+    font-style: 100;
+    text-align: center;
+    align-items: center;
+
+  }
+
+  .about .center .box .button:hover {
+    background-color: black;
+  }
+</style>
+
+
+<div class="about">
+  <center>
+    <div class="def">
+      <h1>Welcome to Our Disease Diversify Site</h1>
+      <h2>Our trained Machine Learning model can predict whether a person is suffering from a disease or not on the
+        basis of details provided to it.<h2>
+    </div>
+  </center>
+
+  <!-- <h2><br/>This site offers the following disease prediction:<br/> -->
+
+  <div class="center">
+    <div class="box">
+      <img src="/static/diabetes.jpg" width="100%" height="70%">
+      <h1>Diabetes Prediction</h1>
+
+      <a class="button" href="{{ url_for('diabetes') }}" type="button">Take Test</a>
+    </div>
+    <div class="box">
+      <img src="/static/heart.jpg" width="100%" height="70%">
+      <h1>Diabetes Prediction</h1>
+
+      <a class="button" href="{{ url_for('diabetes') }}" type="button">Take Test</a>
+    </div>
+    <div class="box">
+      <img src="/static/parkonisis.jpg" width="100%" height="70%">
+      <h1>Diabetes Prediction</h1>
+
+      <a class="button" href="{{ url_for('diabetes') }}" type="button">Take Test</a>
+    </div>
+  </div>
+  <!-- <ul>
+        <li><a href="{{ url_for('diabetes') }}">Diabetes</a></li>
+        <li><a href="{{ url_for('parkinsons') }}">Parkinsons</a></li>
+        <li><a href="{{ url_for('heartdisease') }}">Heart Disease</a></li>
+        <li><a href="{{ url_for('heartdisease') }}">Liver Disease</a></li>
+    </ul> -->
+
+
+</div>
+{%endblock%}
